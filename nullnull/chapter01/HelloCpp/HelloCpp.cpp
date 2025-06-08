@@ -2,8 +2,6 @@
 
 // 1.2 HelloWorld로 본 C++
 
-// HelloCpp.cpp: 콘솔 응용 프로그램에 대한 진입점을 정의
-
 #include <iostream>
 
 int main() {
