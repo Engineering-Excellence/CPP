@@ -12,8 +12,8 @@ int main() {
     int nData{10};
     int eData{-1};
 
-//    int &ref;   // 반드시 초기화해야 사용 가능
-    int &ref{nData};   // nData 변수에 대한 참조자 선언: 참조자는 '별명'이다! -> int *const ref = &nData; // 참조자의 실체: 주소가 변하지 않는 포인터
+//    auto &ref;   // 반드시 초기화해야 사용 가능
+    auto &ref{nData};   // nData 변수에 대한 참조자 선언: 참조자는 '별명'이다! -> int *const ref = &nData; // 참조자의 실체: 주소가 변하지 않는 포인터
 //    &ref = eData;   // 초기화 후에는 재할당 불가
 
     ref = 20;   // 참조자의 값을 변경하면 원본도 변경된다!
