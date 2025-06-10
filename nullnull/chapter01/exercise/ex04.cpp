@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void swap(int &a, int &b);
+void swap(int &, int &);    // 함수 원형에서 매개변수명 생략 가능
 
 int main() {
     int a, b;
