@@ -14,7 +14,7 @@ using namespace std;
 int main() {
     int aList[5]{10, 30, 20, 50, 40};
 
-    sort(begin(aList), end(aList));
+    sort(begin(aList), end(aList)); // Introspective Sort
 
     for (auto i: aList)
         cout << i << " ";
