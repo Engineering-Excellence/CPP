@@ -9,7 +9,7 @@
 using namespace std;    // std 네임스페이스를 using 예약어로 선언
 
 namespace test {
-    int g_nData = 100;
+    int g_nData{100};
 
     void testFunc() {
         cout << "test::testFunc()" << endl; // cout에 대해서 범위를 지정하지 않아도 무관

@@ -9,13 +9,13 @@
 using namespace std;
 
 namespace test {
-    int g_nData = 100;
+    int g_nData{100};
 
     namespace dev {
-        int g_nData = 200;
+        int g_nData{200};
 
         namespace win {
-            int g_nData = 300;
+            int g_nData{300};
         }
     }
 }

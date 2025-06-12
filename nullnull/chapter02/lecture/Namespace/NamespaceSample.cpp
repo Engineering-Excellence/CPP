@@ -7,7 +7,7 @@
 #include <iostream>
 
 namespace test {
-    int g_nData = 100;
+    int g_nData{100};
 
     void testFunc() {
         std::cout << "test::testFunc()" << std::endl;
