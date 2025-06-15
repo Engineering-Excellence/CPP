@@ -11,11 +11,10 @@ using namespace std;
 int main() {
     int *arr = new int[5];  // 객체를 배열 형태로 동적 생성
 
-    for (auto i{0}; i < 5; ++i)
+    for (auto i{0}; i < 5; ++i) {
         arr[i] = (i + 1) * 10;
-
-    for (auto i{0}; i < 5; ++i)
         cout << arr[i] << endl;
+    }
 
     delete[] arr;   // 배열 형태로 생성한 대상은 반드시 배열 형태를 통해 삭제
 
