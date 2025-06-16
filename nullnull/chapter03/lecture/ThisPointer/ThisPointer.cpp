@@ -17,6 +17,8 @@ public:
             : m_nData{nParam} {}
 
     void printData() const {
+        cout << this << endl;
+
         cout << m_nData << endl;    // m_nData의 값을 출력한다.
 
         cout << CMyData::m_nData << endl;   // CMyData 클래스의 멤버인 m_nData의 값을 출력한다.
@@ -33,7 +35,10 @@ int main() {
     CMyData a{5}, b{10};
 
     // &a, &b는 보이지 않지만 실제로는 전달된다.
+    cout << &a << endl;
     a.printData(/* &a */);
+
+    cout << &b << endl;
     b.printData();
 
     return 0;
