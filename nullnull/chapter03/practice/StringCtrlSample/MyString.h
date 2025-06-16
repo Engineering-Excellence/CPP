@@ -3,6 +3,7 @@
 // 3.4 메서드
 
 // 3.4.2 실습 과제1: 프로젝트 생성 및 초기 코드 작성
+// 3.4.4 실습 과제2: 멤버 함수 상수화
 
 #ifndef MYSTRING_H
 #define MYSTRING_H
@@ -19,7 +20,7 @@ public:
 
     ~CMyString();
 
-    const char *getString();
+    const char *getString() const;  // 멤버 읽기만 수행하므로 메서드를 상수화한다.
 
     int setString(const char *pszParam);
 

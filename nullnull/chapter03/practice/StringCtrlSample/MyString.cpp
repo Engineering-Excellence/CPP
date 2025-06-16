@@ -3,6 +3,7 @@
 // 3.4 메서드
 
 // 3.4.2 실습 과제1: 프로젝트 생성 및 초기 코드 작성
+// 3.4.4 실습 과제2: 멤버 함수 상수화
 
 #include "MyString.h"
 #include <cstring>
@@ -14,7 +15,7 @@ CMyString::~CMyString() {
     release();  // 객체가 소멸하기 전에 메모리를 해제한다.
 }
 
-const char *CMyString::getString() {
+const char *CMyString::getString() const {
     return m_pszData;
 }
 
