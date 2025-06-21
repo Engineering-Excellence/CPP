@@ -47,7 +47,8 @@ int main() {
     CMyData a{10};
     CMyData b{20};
 
-    a = b;  // 단순 대입을 시도하면 기본적으로 얕은 복사가 수행되므로 모든 멤버의 값을 그대로 복사한다.
+//    a = b;  // 단순 대입을 시도하면 기본적으로 얕은 복사가 수행되므로 모든 멤버의 값을 그대로 복사한다.
+    a.operator=(a); // a = b
 
     cout << a.getData() << endl;
     cout << b.getData() << endl;
