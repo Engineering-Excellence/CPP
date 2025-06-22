@@ -3,6 +3,7 @@
 // 4.1 복사 생성자
 
 // 4.1.4 실습 과제3: 복사 생성자와 대입 연산자
+// 4.2.3 실습 과제4: 허용되는 변환 적용하기
 
 #ifndef MYSTRING_H
 #define MYSTRING_H
@@ -17,11 +18,17 @@ private:
 public:
     CMyString();
 
-    ~CMyString();
+    explicit CMyString(const char *pszParam);   // 변환 생성자
+
+    operator char *() const {
+        return m_pszData;
+    };
 
     CMyString(const CMyString &rhs);    // 복사 생성자
 
     CMyString &operator=(const CMyString &rhs);
+
+    ~CMyString();
 
     const char *getString() const;
 

@@ -3,6 +3,7 @@
 // 4.1 복사 생성자
 
 // 4.1.4 실습 과제3: 복사 생성자와 대입 연산자
+// 4.2.3 실습 과제4: 허용되는 변환 적용하기
 
 #include "MyString.h"
 #include <cstring>
@@ -10,8 +11,9 @@
 CMyString::CMyString()
         : m_pszData(nullptr), m_nLength{0} {}
 
-CMyString::~CMyString() {
-    release();
+CMyString::CMyString(const char *pszParam)  // 변환 생성자
+        : m_pszData(nullptr), m_nLength(0) {
+    setString(pszParam);
 }
 
 CMyString::CMyString(const CMyString &rhs)  // 복사 생성자
@@ -25,6 +27,10 @@ CMyString &CMyString::operator=(const CMyString &rhs) {
         this->setString(rhs.getString());
     }
     return *this;
+}
+
+CMyString::~CMyString() {
+    release();
 }
 
 const char *CMyString::getString() const {
